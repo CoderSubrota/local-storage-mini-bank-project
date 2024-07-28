@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(blue,cyan,orange);
+    background-color: #082f5e;
     font-family: "Open Sans", sans-serif;
 }
 .funtionalContainer{
@@ -9,6 +9,19 @@ body{
     margin-left: 2%;
     margin-top: 85px;
     margin-bottom: 85px;
+}
+.logo{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-top: 46px;
+}
+.headerDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 25%;
 }
 #message{
     background-color: red;
@@ -32,7 +45,6 @@ body{
 .inputDiv{
     display: flex;
     flex-direction: column;
-    margin-left: 32%;
 }
 .inputDiv > select{
     width: 450px;
@@ -82,7 +94,7 @@ body{
     padding-top: 58px;
 }
 .withdraw{
-    background-color: rgba(163, 209, 35, 0.788);
+    background-color: #085f77;
     height:180px;
     width: 250px;
     border-radius: 28px;
@@ -104,7 +116,7 @@ body{
     padding-top: 58px;
 }
 .total{
-    background-color: rgba(63, 144, 13, 0.788);
+    background-color: #053f62;
     height:180px;
     width: 250px;
     border-radius: 28px;
@@ -144,8 +156,9 @@ body{
     font-size: 16px;
     color: darkblue;
     font-weight: bolder;
-    margin: 12px 0px;
     visibility: hidden;
+    margin-top: 40px;
+    margin-bottom: -185px;
 }
 
 .fa-solid{
@@ -153,6 +166,43 @@ body{
     font-size: 45px;
     margin-top: 8px;
     margin-left: 38%;
+}
+#delete{
+    visibility: hidden;
+    margin-top: -140px;
+    margin-bottom: 75px;
+    padding: 10px;
+    border: none;
+    border-radius: 24px;
+    background-color: rgba(225, 14, 106, 0.916);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    width: 450px;
+}
+#delete:hover{
+    background-color: red;
+    transition:background-color 1s ;
+    cursor: pointer;
+}
+.optionIsFound{
+    margin-top: -60px;
+}
+#form{
+   box-shadow: 4px 3px 4px 5px white;
+   height: auto;
+   width: fit-content;
+   padding: 28px 20px;
+   margin: auto;
+   border-radius: 28px;
+}
+body::-webkit-scrollbar{
+    width: 14px;
+    background-color: #500ba4;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #085f77;
+    border-radius: 14px;
 }
 
 @media (max-width:1200px) {

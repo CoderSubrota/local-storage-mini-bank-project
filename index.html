@@ -14,14 +14,20 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="logo.PNG" type="image/x-icon"/>
+    <link rel="shortcut icon" href="bank-logo.jpg" type="image/x-icon"/>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini bank</title>
   </head>
   <body>
-    <h2 class="title">Mini <span class="bankText">Bank</span></h2>
+    <div class="headerDiv">
+      <div>
+        <img src="bank-logo.jpg" alt="logo"  class="logo"/>
+      </div>
+      <h2 class="title">Mini <span class="bankText">Bank</span></h2>
+    </div>
     <marquee behavior="scroll" direction="left">
+
       <p class="WelcomeText">
         Welcome to <span style="color: lime"> Mini Bank </span> your safty is
         our duty !!
@@ -29,23 +35,29 @@
     </marquee>
     <h2 id="message"></h2>
 
-    <form>
+    <form id="form">
       <div class="inputDiv">
         <select name="option" id="option" onchange="selectOption()">
           <option selected disabled>Please select your option</option>
           <option value="deposite">Deposite</option>
           <option value="withdraw">Withdraw</option>
           <option value="transfer">Transfer</option>
+          <option value="delete">Delete data</option>
         </select>
-        <div class="transferInput">
-          <input
-            type="number"
-            name="transferNumber"
-            id="transferNumber"
-            placeholder="Please enter your transfer account number"
-            required
-          />
-        </div>
+
+          <div class="transferInput">
+            <input
+              type="number"
+              name="transferNumber"
+              id="transferNumber"
+              placeholder="Please enter your transfer account number"
+              required
+            />
+          </div>
+          <div class="deleteButton">
+            <button id="delete">Delete</button>
+          </div>
+ 
         <div class="input">
           <input
             type="number"

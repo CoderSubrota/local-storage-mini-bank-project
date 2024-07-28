@@ -8,16 +8,17 @@ let transferMoney = document.querySelector("#transferMoney");
 let totalMoney = document.querySelector("#totalMoney");
 let message = document.querySelector("#message");
 let transferNumber = document.querySelector("#transferNumber");
+let deleteButton = document.querySelector("#delete");
 //get local storage data
-let getData = JSON.parse(localStorage.getItem("mini-bank") || '{}');
+let getData = JSON.parse(localStorage.getItem("mini-bank") || "{}");
 
 //update money status
-let depositeAmount = getData.depositeMoney?getData.depositeMoney:0;
-let totalAmount = getData.totalMoney?getData.totalMoney:0;
-let withdrawAmount = getData.withdrawMoney?getData.withdrawMoney:0;
-let transferAmount = getData.transferMoney?getData.transferMoney:0;
+let depositeAmount = getData.depositeMoney ? getData.depositeMoney : 0;
+let totalAmount = getData.totalMoney ? getData.totalMoney : 0;
+let withdrawAmount = getData.withdrawMoney ? getData.withdrawMoney : 0;
+let transferAmount = getData.transferMoney ? getData.transferMoney : 0;
 
-//Display data after realoading //saved data 
+//Display data after realoading //saved data
 
 depositeMoney.innerHTML = depositeAmount;
 totalMoney.innerHTML = totalAmount;
@@ -29,7 +30,7 @@ function deposite(amountSet) {
   depositeAmount += parseInt(amountSet);
   totalAmount += parseInt(amountSet);
   depositeMoney.innerHTML = depositeAmount;
- totalMoney.innerHTML = totalAmount;
+  totalMoney.innerHTML = totalAmount;
   amountInputFeild.value = "";
 }
 //withdraw function
@@ -65,7 +66,26 @@ function selectOption() {
   } else {
     transferNumber.style.visibility = "hidden";
   }
+  if (option.value === "delete") {
+    deleteButton.style.visibility = "visible";
+  } else {
+    deleteButton.style.visibility = "hidden";
+  }
 }
+//delete data from local storage
+
+deleteButton.addEventListener("click", function () {
+  let confirm = window.confirm("Are you want to delete your data !!");
+  if (confirm) {
+    localStorage.removeItem("mini-bank");
+    depositeMoney.innerHTML = 0;
+    totalMoney.innerHTML = 0;
+    withdrawMoney.innerHTML = 0;
+    transferMoney.innerHTML = 0;
+  } else {
+    alert("Your data is safe : )");
+  }
+});
 
 //submit data
 submite.addEventListener("click", function () {
@@ -131,6 +151,3 @@ message.addEventListener("click", function () {
 
 3/ localStorage.removeItem("myKey") ;
  */
-
-
-
