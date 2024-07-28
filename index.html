@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awsome icon cdn link -->
+    <script
+      src="https://kit.fontawesome.com/af6abba921.js"
+      crossorigin="anonymous"
+    ></script>
+ <!-- google font  family cdn link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="logo.PNG" type="image/x-icon"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini bank</title>
+  </head>
+  <body>
+    <h2 class="title">Mini <span class="bankText">Bank</span></h2>
+    <marquee behavior="scroll" direction="left">
+      <p class="WelcomeText">
+        Welcome to <span style="color: lime"> Mini Bank </span> your safty is
+        our duty !!
+      </p>
+    </marquee>
+    <h2 id="message"></h2>
+
+    <form>
+      <div class="inputDiv">
+        <select name="option" id="option" onchange="selectOption()">
+          <option selected disabled>Please select your option</option>
+          <option value="deposite">Deposite</option>
+          <option value="withdraw">Withdraw</option>
+          <option value="transfer">Transfer</option>
+        </select>
+        <div class="transferInput">
+          <input
+            type="number"
+            name="transferNumber"
+            id="transferNumber"
+            placeholder="Please enter your transfer account number"
+            required
+          />
+        </div>
+        <div class="input">
+          <input
+            type="number"
+            name="amount"
+            id="amountInputFeild"
+            placeholder="Please enter your amount"
+            required
+          />
+          <button type="submit" id="submit">Submite</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="funtionalContainer">
+      <div class="deposite">
+        <div class="depositeIcon">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <h2>
+          Total deposite money:
+          <span class="money"> $<span id="depositeMoney">0</span></span>
+        </h2>
+      </div>
+      <div class="withdraw">
+        <div class="withdrawIcon">
+          <i class="fa-solid fa-rotate"></i>
+        </div>
+
+        <h2>
+          Total withdraw money:<span class="money">
+            $<span id="withdrawMoney">0</span></span
+          >
+        </h2>
+      </div>
+      <div class="transfer">
+        <div class="transferIcon">
+          <i class="fa-solid fa-money-bill-transfer"></i>
+        </div>
+        <h2>
+          Total transfer money:<span class="money">
+            $<span id="transferMoney">0</span></span
+          >
+        </h2>
+      </div>
+      <div class="total">
+        <div style="margin-left: 8%">
+          <i class="fa-solid fa-calculator"></i>
+        </div>
+        <h2>
+          Total sufficient money:
+          <span class="money"> $<span id="totalMoney">0</span></span>
+        </h2>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

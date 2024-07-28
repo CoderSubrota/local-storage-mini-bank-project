@@ -1,0 +1,187 @@
+body{
+    background-image: linear-gradient(blue,cyan,orange);
+    font-family: "Open Sans", sans-serif;
+}
+.funtionalContainer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 42px;
+    margin-left: 2%;
+    margin-top: 85px;
+    margin-bottom: 85px;
+}
+#message{
+    background-color: red;
+    width: fit-content;
+    margin: auto;
+    padding: 8px 25px;
+    border-radius: 25px;
+    font-size: 30px;
+    color: white;
+    visibility: hidden;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#message:hover{
+    background-color: darkblue;
+    transition:  background-color 1s ;
+}
+
+.inputDiv{
+    display: flex;
+    flex-direction: column;
+    margin-left: 32%;
+}
+.inputDiv > select{
+    width: 450px;
+    padding: 8px 11px;
+    border-radius: 20px;
+    border: 2px solid lime;
+    margin: 12px 0px;
+    font-size: 18px;
+    color: darkblue;
+    font-weight: bolder;
+}
+
+.input > input {
+    width: 215px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: 2px solid lime;
+    font-size: 16px;
+    color: darkblue;
+    font-weight: bolder;
+
+}
+.input > button {
+    width: 215px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid lime;
+    font-size: 16px;
+    color: darkblue;
+    font-weight: bolder;
+}
+.input > button:hover{
+    background-color:darkblue ;
+    color: white;
+    cursor: pointer;
+    transition:  background-color 1s , color 1s;
+}
+.deposite{
+    background-color: rgba(130, 13, 126, 0.643);
+    height:180px;
+    width: 250px;
+    border-radius: 28px;
+    padding: 25px;
+    color: white;
+    filter: brightness(1.2);
+    font-size: 18px;
+    padding-top: 58px;
+}
+.withdraw{
+    background-color: rgba(163, 209, 35, 0.788);
+    height:180px;
+    width: 250px;
+    border-radius: 28px;
+    padding: 25px;
+    color: white;
+    filter: brightness(1.2);
+    font-size: 18px;
+    padding-top: 58px;
+}
+.transfer{
+    background-color: rgba(221, 23, 112, 0.788);
+    height:180px;
+    width: 250px;
+    border-radius: 28px;
+    padding: 25px;
+    color: white;
+    filter: brightness(1.2);
+    font-size: 18px;
+    padding-top: 58px;
+}
+.total{
+    background-color: rgba(63, 144, 13, 0.788);
+    height:180px;
+    width: 250px;
+    border-radius: 28px;
+    padding: 25px;
+    color: white;
+    filter: brightness(1.8);
+    font-size: 18px;
+    padding-top: 58px;
+}
+.deposite:hover, .withdraw:hover, .transfer:hover, .total:hover{
+    transform: scale(1.1);
+    transition:transform 1s ;
+}
+.title{
+    font-size: 45px;
+    color: lime;
+    text-align: center;
+    font-weight: bolder;
+}
+.bankText{
+    color: cyan;
+}
+.WelcomeText{
+    font-size: 35px;
+    color: white;
+}
+
+.money{
+    color: darkblue;
+}
+
+#transferNumber{
+    width: 425px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: 2px solid lime;
+    font-size: 16px;
+    color: darkblue;
+    font-weight: bolder;
+    margin: 12px 0px;
+    visibility: hidden;
+}
+
+.fa-solid{
+    text-align: center;
+    font-size: 45px;
+    margin-top: 8px;
+    margin-left: 38%;
+}
+
+@media (max-width:1200px) {
+    .funtionalContainer{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media (max-width:1000px) {
+    .funtionalContainer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+@media (max-width:800px) {
+    .funtionalContainer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media (max-width:600px) {
+    .funtionalContainer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin-left: 30%;
+    }
+}
