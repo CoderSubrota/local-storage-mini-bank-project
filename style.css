@@ -226,6 +226,14 @@ body::-webkit-scrollbar-thumb{
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
+    .inputDiv,.input, #transferNumber, .inputDiv > select, #delete{
+        width: 210px;
+        margin-left: -5px;
+    }
+    .logo{display: none;}
+       #submit{
+        margin: 25px 0px;
+    }
 }
 
 
