@@ -145,7 +145,8 @@ body{
 }
 
 .money{
-    color: darkblue;
+    color: #b6c7d1;
+    text-shadow: 2px 1px lime;
 }
 
 #transferNumber{
